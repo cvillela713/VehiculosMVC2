@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Vehículos";
+    var auto = ViewBag.Auto as VehiculosMVC2.Models.Auto;
+    var moto = ViewBag.Moto as VehiculosMVC2.Models.Moto;
+}
+
+<h2>Información de Vehículos</h2>
+
+<h3>Auto</h3>
+<table class="table table-bordered">
+    <tr><th>Marca</th><td>@auto.Marca</td></tr>
+    <tr><th>Modelo</th><td>@auto.Modelo</td></tr>
+    <tr><th>Año</th><td>@auto.Anio</td></tr>
+    <tr><th>Número de Puertas</th><td>@auto.NumeroPuertas</td></tr>
+</table>
+
+<h3>Moto</h3>
+<table class="table table-bordered">
+    <tr><th>Marca</th><td>@moto.Marca</td></tr>
+    <tr><th>Modelo</th><td>@moto.Modelo</td></tr>
+    <tr><th>Año</th><td>@moto.Anio</td></tr>
+    <tr><th>Cilindraje (CC)</th><td>@moto.CilindrajeCC</td></tr>
+    <tr><th>Tiene Parrilla</th><td>@(moto.TieneParrilla ? "Sí" : "No")</td></tr>
+</table>
